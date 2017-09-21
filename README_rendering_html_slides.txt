@@ -5,7 +5,8 @@ ipython nbconvert presentation.ipynb --to slides --post serve
 ipython nbconvert presentation.ipynb --to slides
 
 // To open the html file in a browser
-python -m SimpleHTTPServer 
+python3 -m http.server
+// (OLD VERSION: python -m SimpleHTTPServer) 
 
 // If the port is already in use (error: socket.error: [Errno 48] Address already in use)
 ps -fA | grep python
@@ -15,7 +16,8 @@ ps -fA | grep python
 kill 81651
 
 // Alternatively, run the server on a different port, by specifying the alternative port on the command line (the port number can be any number from 1024 and up, provided the port is not already taken.):
-python -m SimpleHTTPServer 8910 
+python3 -m http.server
+// OLD VERSION python -m SimpleHTTPServer 8910 
 
 // then access the server at
 http://localhost:8910
